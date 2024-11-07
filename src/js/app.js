@@ -47,6 +47,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function validarEmailBlur(e) {
         const valorEmail = e.target.value.trim();
 
+        if(valorEmail === '') {
+            e.target.setAttribute('placeholder', e.target.getAttribute('data-placeholder'))
+            mostrarAlerta(`${e.target.placeholder} cannot be empty`, e.target)
+            comprobarFormulario()
+            return
+        }
+
         if(valorEmail !== '' && !validarEmail(valorEmail)) {
             e.target.value = 'email@example/com'
             mostrarAlerta('Looks like this is not an email', e.target);
@@ -62,10 +69,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function limpiarErrorCorreo(e) {
         // Cuando el input recibe foco, limpiamos el error 
-        limpiarAlerta(e.target);
-        limpiarImagen(e.target);
-        e.target.value = ''
-        e.target.classList.remove('text-red-pink')
+        if(e.target.value !== '') {
+            limpiarAlerta(e.target);
+            limpiarImagen(e.target);
+            e.target.value = ''
+            e.target.classList.remove('text-red-pink', 'border-red-pink', 'focus:border-red-pink')
+            e.target.setAttribute('placeholder', e.target.getAttribute('data-placeholder'))
+        }
     }
 
     function enviarEmail(e) {
