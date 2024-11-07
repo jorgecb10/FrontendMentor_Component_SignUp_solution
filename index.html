@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="../src/images/favicon-32x32.png">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="flex flex-col items-center justify-center font-body">
+  <main class="contenedor md:grid grid-cols-2 items-center gap-12">
+    <header class="text-white text-center md:text-left">
+      <h1 class="font-bold text-4xl md:text-5xl">Learn to code by watching others</h1>
+      <p class="mt-5 mb-10">
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+        but understanding how developers think is invaluable.
+      </p>
+    </header>
+
+    <div>
+      <div class="py-5 px-20 mb-5 shadow-sombra bg-blue-hsl rounded-xl text-white text-center md:py-3">
+        <p class="font-light">
+          <span class="font-bold">Try it free 7 days</span>
+          then $20/mo. thereafter
+        </p>
+      </div>
+
+      <div class="p-5 bg-white rounded-xl md:p-7">
+        <form id="formulario" novalidate class="flex flex-col">
+          <div>
+            <input class="p-3 border-solid border-gray-300 border rounded-md focus:border-blue-hsl focus:outline-none w-full" type="text" id="first-name" placeholder="First Name">
+          </div>
+          
+          <div>
+            <input class="p-3 border-solid border-gray-300 border rounded-md focus:border-blue-hsl focus:outline-none mt-3 w-full" type="text" id="last-name" placeholder="Last Name">
+          </div>
+
+          <div>
+            <input class="p-3 border-solid border-gray-300 border rounded-md focus:border-blue-hsl focus:outline-none mt-3 w-full" type="email" id="email" placeholder="Email Address">
+          </div>
+
+          <div>
+            <input class="p-3 border-solid border-gray-300 border rounded-md focus:border-blue-hsl focus:outline-none mt-3 w-full" type="password" id="password" placeholder="Password">
+          </div>
+  
+          <button id="submit" class="mt-3 mb-3 py-5 px-10 uppercase font-bold text-white bg-green-hsl rounded-md md:py-3 hover:opacity-70 transition-opacity duration-200" type="submit">
+            Claim your free trial
+          </button>
+        </form>
+
+        <p class="text-center text-grayish-blue text-xs px-5 font-bold">
+          By clicking the button, you are agreeing to our 
+          <span class="text-red-pink"> Terms and Services</span>
+        </p>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="contenedor mt-5 text-center text-white font-semibold">
+    <p class="attribution">
+      Challenge by <a class="text-blue-hsl" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor.</a>
+      Coded by <a class="text-blue-hsl" href="https://github.com/jorgecb10">Jorge Carranza.</a>
+    </p>
+  </footer>
+
+  <script src="src/js/app.js"></script>
+</body>
+</html>
